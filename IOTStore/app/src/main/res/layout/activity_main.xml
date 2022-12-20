@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvIOT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="IOT Store"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItems"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:text="Items"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvIOT"
+        app:layout_constraintTop_toBottomOf="@+id/tvIOT" />
+    <TextView
+        android:id="@+id/tvQuantity"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="20dp"
+        android:text="Quantity"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/tvIOT"
+        app:layout_constraintTop_toBottomOf="@+id/tvIOT" />
+
+    <EditText
+        android:id="@+id/etAurdino"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tvAurdino"
+        app:layout_constraintTop_toBottomOf="@+id/tvItems" />
+
+    <TextView
+        android:id="@+id/tvAurdino"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:text="Android Uno"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvItems"
+        app:layout_constraintTop_toBottomOf="@+id/tvItems" />
+    <TextView
+        android:id="@+id/tvWifi"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:text="Wifi module"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvAurdino"
+        app:layout_constraintTop_toBottomOf="@+id/tvAurdino" />
+    <EditText
+        android:id="@+id/etWifi"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:inputType="number"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tvWifi"
+        app:layout_constraintTop_toBottomOf="@+id/tvAurdino" />
+    <TextView
+        android:id="@+id/tvbluetooth"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="60dp"
+        android:text="bluetooth"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/tvWifi"
+        app:layout_constraintTop_toBottomOf="@+id/tvWifi" />
+    <EditText
+        android:id="@+id/etbluetooth"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="20dp"
+        android:inputType="number"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tvbluetooth"
+        app:layout_constraintTop_toBottomOf="@+id/tvWifi" />
+
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@+id/tvbluetooth"
+        app:layout_constraintTop_toBottomOf="@+id/tvbluetooth" />
+
+    <Button
+        android:id="@+id/btClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Clear"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/btSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/tvbluetooth" />
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:text="Amount Payable"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="@+id/btSubmit"
+        app:layout_constraintTop_toBottomOf="@+id/btSubmit"/>
+    <TextView
+        android:id="@+id/tvAmountDisplayer"
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:textSize="15sp"
+        android:hint="Total Amount"
+        app:layout_constraintStart_toEndOf="@+id/tvAmount"
+        app:layout_constraintTop_toBottomOf="@+id/btClear" />
+</androidx.constraintlayout.widget.ConstraintLayout>

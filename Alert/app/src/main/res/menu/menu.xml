@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Alert"
+        android:id="@+id/a"
+        app:showAsAction="always"/>
+    <item android:title="TimePicker Alert"
+        android:id="@+id/tp"
+        app:showAsAction="always"/>
+    <item android:title="DatePicker Alert"
+        android:id="@+id/dp"
+        app:showAsAction="always"/>
+
+</menu>
