@@ -1,37 +1,66 @@
 package com.example.recyclerview;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    static final String countries[] = {"Algeria", "Argentina", "Austin", "Australia", "Brazil", "Cote d'Ivoire", "Cameroon",
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+            "Chile", "Costa Rica", "Denmark", "England", "France", "Germany", "Ghana", "Greece", "Honduras", "Italy", "Japan", "Netherlands",
+            "New Zealand", "Nigeria", "North Korea", "Paraguay", "Portugal", "Serbia", "Slovakia", "Slovenia", "South Africa", "South Korea",
+            "Spain", "Switzerland", "United States", "Uruguay"};
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RecyclerView recyclerView = findViewById(R.id.recycler);
+     recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        MyAdapter myAdapter=new MyAdapter(this,countries);
+        recyclerView.setAdapter(myAdapter);
+        }
 
-        MyListData[] myListData = new MyListData[] {
-                new MyListData("Email", android.R.drawable.ic_dialog_email),
-                new MyListData("Info", android.R.drawable.ic_dialog_info),
-                new MyListData("Delete", android.R.drawable.ic_delete),
-                new MyListData("Dialer", android.R.drawable.ic_dialog_dialer),
-                new MyListData("Alert", android.R.drawable.ic_dialog_alert),
-                new MyListData("Map", android.R.drawable.ic_dialog_map),
-                new MyListData("Email", android.R.drawable.ic_dialog_email),
-                new MyListData("Info", android.R.drawable.ic_dialog_info),
-                new MyListData("Delete", android.R.drawable.ic_delete),
-                new MyListData("Dialer", android.R.drawable.ic_dialog_dialer),
-                new MyListData("Alert", android.R.drawable.ic_dialog_alert),
-                new MyListData("Map", android.R.drawable.ic_dialog_map),
-        };
+        }
+class MyAdapter extends RecyclerView.Adapter<MyAdapter.Myholder> {
+    Context mycontext;
+    String mycountries[];
+    public MyAdapter(Context context,String countires[] ) {
+        mycontext=context;
+        mycountries=countires;
+    }
+    @NonNull
+    @Override
+    public Myholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater=LayoutInflater.from(mycontext);
+        View v=layoutInflater.inflate(R.layout.my_text_view,parent,false);
+        return new Myholder(v);
+    }
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
-        MyListAdapter adapter = new MyListAdapter(myListData);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+    @Override
+    public void onBindViewHolder(@NonNull Myholder holder, int position) {
+        holder.textView.setText(mycountries[position]);
+    }
+    @Override
+    public int getItemCount() {
+        return mycountries.length;
+    }
+
+    public class Myholder extends RecyclerView.ViewHolder {
+        TextView textView;
+        public Myholder(@NonNull View itemView) {
+            super(itemView);
+            textView=itemView.findViewById(R.id.textview1);
+
+        }
     }
 }

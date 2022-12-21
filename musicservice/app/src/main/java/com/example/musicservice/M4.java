@@ -1,0 +1,24 @@
+package com.example.musicservice;
+import android.app.Service;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.IBinder;
+import android.widget.Toast;
+public class M4 extends Service {
+    MediaPlayer myPlayer;
+    public IBinder onBind(Intent intent) { return null;
+    }
+    @Override
+    public void onCreate() {
+        myPlayer = MediaPlayer.create(this,R.raw.test4);
+    }
+    @Override
+    public void onStart(Intent intent, int startid) {
+        Toast.makeText(this, "Service Started and Playing Music", Toast.LENGTH_LONG).show();
+        myPlayer.start();
+    }
+    @Override
+    public void onDestroy() {
+        Toast.makeText(this, "Service Stopped and Music Stopped", Toast.LENGTH_LONG).show();
+        myPlayer.stop();
+    }}

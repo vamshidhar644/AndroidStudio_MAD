@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+
+        android:id="@+id/TB1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:text="SET"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ETT1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ETT1" />
+
+    <Button
+
+        android:id="@+id/TB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:text="SET"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ETT2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ETT2" />
+
+    <Button
+        android:id="@+id/TB3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="267dp"
+        android:text="SET"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ETT3" />
+
+    <EditText
+
+        android:id="@+id/ETT1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        app:layout_constraintEnd_toStartOf="@+id/TB1"
+        app:layout_constraintStart_toEndOf="@+id/T1"
+        app:layout_constraintTop_toTopOf="@+id/T1" />
+
+    <EditText
+        android:id="@+id/ETT2"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        app:layout_constraintBottom_toTopOf="@+id/TB3"
+        app:layout_constraintEnd_toStartOf="@+id/TB2"
+        app:layout_constraintStart_toEndOf="@+id/T2"
+        app:layout_constraintTop_toBottomOf="@+id/ETT1" />
+
+    <EditText
+
+        android:id="@+id/ETT3"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TB3"
+        app:layout_constraintEnd_toStartOf="@+id/TB3"
+        app:layout_constraintStart_toEndOf="@+id/T3" />
+
+    <TextView
+        android:id="@+id/T1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="76dp"
+        android:text="Event1"
+        app:layout_constraintBottom_toTopOf="@+id/T2"
+        app:layout_constraintEnd_toStartOf="@+id/ETT1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/T2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="68dp"
+        android:text="Event2"
+        app:layout_constraintBottom_toTopOf="@+id/T3"
+        app:layout_constraintEnd_toStartOf="@+id/ETT2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/T1" />
+
+    <TextView
+        android:id="@+id/T3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="267dp"
+        android:text="Event3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ETT3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/T2" />
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:text="SUBMIT"
+        app:layout_constraintStart_toStartOf="@+id/ETT3"
+        app:layout_constraintTop_toBottomOf="@+id/ETT3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
