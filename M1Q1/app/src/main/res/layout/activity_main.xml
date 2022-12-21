@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ch1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Play Music"
+        ></CheckBox>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="open google"
+        android:id="@+id/txt1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/ch1">
+
+    </TextView>
+
+    <Switch
+        android:layout_below="@+id/ch1"
+        android:layout_toRightOf="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="100dp"
+        android:text="Switch"
+        android:id="@+id/sw"></Switch>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start Activity"
+        android:id="@+id/txt2"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/txt1">
+
+    </TextView>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tg"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@id/txt1"
+        android:layout_toRightOf="@+id/txt2"
+        ></ToggleButton>
+
+    <Button
+        android:id="@+id/b1"
+        android:layout_below="@id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Broadcast"
+        ></Button>
+
+</RelativeLayout>
